@@ -19,14 +19,15 @@ function welcoming() {
   let aReturn = [];
   currentState = chooseItem;
 
+  aReturn.push("THIS IS THE NEW VERSION");
   aReturn.push("Welcome to The Boba Bar.");
-  aReturn.push("What would you like?");
+  aReturn.push("What would you");
   aReturn.push("1. Bubble Tea");
   aReturn.push("2. Fruit Smoothie");
 
+
   return aReturn;
 }
-
 function chooseItem(sInput) {
   let aReturn = [];
     
