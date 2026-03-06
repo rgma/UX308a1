@@ -19,9 +19,7 @@ function welcoming() {
   let aReturn = [];
   currentState = chooseItem;
 
-  aReturn.push("THIS IS THE NEW VERSION");
-  aReturn.push("Welcome to The Boba Bar.");
-  aReturn.push("What would you");
+  aReturn.push("Welcome to The Boba Bar! What would you like?");
   aReturn.push("1. Bubble Tea");
   aReturn.push("2. Fruit Smoothie");
 
@@ -56,9 +54,15 @@ function chooseSize(sInput) {
   order.size = sInput; 
   currentState = chooseTopping; 
 
-  aReturn.push("Pick a topping:");
-  aReturn.push("Pearls or Jelly");
-
+if(order.item == "Bubble Tea"){
+    aReturn.push("Pick a topping: Pearls or Jelly");
+    aReturn.push("Pearls or Jelly");
+  }
+  else{
+    aReturn.push("Pick a fruit!");
+     aReturn.push("Strawberry or Mango");
+    
+  }
   return aReturn;
 }
 
@@ -76,7 +80,7 @@ function chooseTopping(sInput) {
 function upsell(sInput){
   let aReturn = [];
 
-  if(sInput.toLowerCase() == "y") {
+  if(sInput == "y") {
     order.upsell = "Cookie";
   } 
   else {
